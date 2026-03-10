@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Mengfei Peng | Academic Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #f8f7f4;
+            --text-primary: #1a1a1a;
+            --accent: #5e5e5e;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d1d1d1;
+            border-radius: 10px;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .reveal {
+            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+        }
+
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+
+        .hover-lift {
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+        }
+        
+        .project-card:hover .hover-lift {
+            transform: scale(1.02);
+        }
+
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--text-primary);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 px-6 py-8 md:px-12 flex justify-between items-center mix-blend-difference">
+        <a href="index.html" class="text-xl font-semibold tracking-tighter text-white">MP.</a>
+        <div class="hidden md:flex space-x-12 text-sm uppercase tracking-widest text-white">
+            <a href="index.html#experience" class="nav-link">Work</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="index.html#research" class="nav-link">Research</a>
+            <a href="index.html#contact" class="nav-link">Contact</a>
+        </div>
+        <button class="md:hidden text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="min-h-screen flex flex-col justify-center px-6 md:px-12 pt-20">
+        <div class="max-w-6xl">
+            <span class="inline-block text-xs uppercase tracking-[0.3em] mb-6 opacity-60 reveal">PhD Scholar @ EdUHK • Hong Kong</span>
+            <h1 class="text-6xl md:text-[110px] leading-[0.9] font-light serif reveal stagger-1">
+                Academic <br>
+                <i>Profile</i> & <br>
+                Philosophy.
+            </h1>
+            <div class="mt-12 flex flex-col md:flex-row md:items-end justify-between reveal stagger-2">
+                <p class="max-w-md text-lg md:text-xl text-accent font-light leading-relaxed">
+                    Dedicated to advancing language education through research-driven pedagogy and innovative multimodal approaches.
+                </p>
+                <div class="mt-8 md:mt-0">
+                    <a href="#education" class="group flex items-center space-x-4 border border-black/10 rounded-full px-8 py-4 hover:bg-black hover:text-white transition-all duration-500">
+                        <span class="text-sm uppercase tracking-widest">View Details</span>
+                        <svg class="group-hover:translate-x-1 transition-transform" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Education Section -->
+    <section id="education" class="px-6 md:px-12 py-32 border-t border-black/5">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-5xl serif mb-20 reveal">Educational Journey</h2>
+            
+            <div class="grid md:grid-cols-2 gap-16">
+                <div class="reveal stagger-1">
+                    <div class="border-l-4 border-black pl-8">
+                        <h3 class="text-2xl serif italic mb-4">University of Edinburgh</h3>
+                        <p class="text-sm uppercase tracking-widest opacity-60 mb-2">2018–2019</p>
+                        <p class="text-lg font-light leading-relaxed">
+                            Master of Science in Applied Linguistics and TESOL. Specialized in second language acquisition and pedagogical methodologies.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="reveal stagger-2">
+                    <div class="border-l-4 border-black pl-8">
+                        <h3 class="text-2xl serif italic mb-4">East China Normal University</h3>
+                        <p class="text-sm uppercase tracking-widest opacity-60 mb-2">2014–2018</p>
+                        <p class="text-lg font-light leading-relaxed">
+                            Bachelor of Arts in Teaching Chinese to Speakers of Other Languages. Foundation in linguistic theory and cross-cultural communication.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teaching Philosophy -->
+    <section class="px-6 md:px-12 py-32 bg-white/50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-5xl serif mb-20 reveal">Teaching Philosophy</h2>
+            
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="reveal stagger-1">
+                    <h4 class="text-xl serif italic mb-4">Student-Centered</h4>
+                    <p class="text-sm text-accent leading-relaxed">
+                        Empowering learners through personalized approaches that respect individual learning styles and cultural backgrounds.
+                    </p>
+                </div>
+                
+                <div class="reveal stagger-2">
+                    <h4 class="text-xl serif italic mb-4">Project-Based</h4>
+                    <p class="text-sm text-accent leading-relaxed">
+                        Fostering critical thinking and problem-solving skills through authentic, real-world language tasks.
+                    </p>
+                </div>
+                
+                <div class="reveal stagger-3">
+                    <h4 class="text-xl serif italic mb-4">Multimodal</h4>
+                    <p class="text-sm text-accent leading-relaxed">
+                        Integrating visual, auditory, and kinesthetic elements to enhance language acquisition and engagement.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Development -->
+    <section class="px-6 md:px-12 py-32 border-t border-black/5">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-5xl serif mb-20 reveal">Professional Development</h2>
+            
+            <div class="space-y-12">
+                <div class="flex gap-8 border-b border-black/5 pb-8 reveal stagger-1">
+                    <span class="text-xs uppercase tracking-widest opacity-40">UBC</span>
+                    <div>
+                        <h4 class="font-semibold mb-2">University of British Columbia</h4>
+                        <p class="text-sm text-accent leading-relaxed italic">Exchange program focusing on language pedagogy and curriculum design.</p>
+                    </div>
+                </div>
+                
+                <div class="flex gap-8 border-b border-black/5 pb-8 reveal stagger-2">
+                    <span class="text-xs uppercase tracking-widest opacity-40">NUS</span>
+                    <div>
+                        <h4 class="font-semibold mb-2">National University of Singapore</h4>
+                        <p class="text-sm text-accent leading-relaxed italic">Research collaboration on multimodal learning approaches in language education.</p>
+                    </div>
+                </div>
+                
+                <div class="flex gap-8 reveal stagger-3">
+                    <span class="text-xs uppercase tracking-widest opacity-40">Haifa</span>
+                    <div>
+                        <h4 class="font-semibold mb-2">University of Haifa</h4>
+                        <p class="text-sm text-accent leading-relaxed italic">Cross-cultural communication studies and comparative education methodologies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="px-6 md:px-12 py-40 border-t border-black/5">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-5xl md:text-8xl serif mb-12 reveal">Academic Collaboration</h2>
+            <div class="space-y-6 reveal stagger-1">
+                <p class="text-xl font-light opacity-60">Interested in research partnerships or educational consulting?</p>
+                <a href="index.html#contact" class="text-2xl md:text-4xl hover:italic transition-all inline-block border-b-2 border-black/10 pb-2">
+                    Let's Connect
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="px-6 md:px-12 py-12 flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-widest opacity-30 border-t border-black/5">
+        <p>© 2026 Mengfei Peng • Education University of Hong Kong</p>
+        <p>Ph.D. Candidate in TCSL</p>
+    </footer>
+
+    <script>
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.classList.add('reveal');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            el.style.opacity = "0";
+            observer.observe(el);
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if(target) target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>

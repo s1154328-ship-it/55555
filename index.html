@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengfei Peng | Portfolio & Academic Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #f8f7f4;
+            --text-primary: #1a1a1a;
+            --accent: #5e5e5e;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        .serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d1d1d1;
+            border-radius: 10px;
+        }
+
+        /* Masonry Layout Logic */
+        .masonry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(100%, 450px), 1fr));
+            grid-auto-rows: 10px;
+            gap: 0 2rem;
+        }
+
+        .masonry-item {
+            grid-row-end: span 40;
+            margin-bottom: 2rem;
+        }
+
+        .masonry-item:nth-child(even) {
+            grid-row-end: span 52;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .reveal {
+            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+        }
+
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+
+        .hover-lift {
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+        }
+        
+        .project-card:hover .hover-lift {
+            transform: scale(1.02);
+        }
+
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--text-primary);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 px-6 py-8 md:px-12 flex justify-between items-center mix-blend-difference">
+        <a href="#" class="text-xl font-semibold tracking-tighter text-white">MP.</a>
+        <div class="hidden md:flex space-x-12 text-sm uppercase tracking-widest text-white">
+            <a href="#experience" class="nav-link">Work</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#research" class="nav-link">Research</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+        <button class="md:hidden text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="min-h-screen flex flex-col justify-center px-6 md:px-12 pt-20">
+        <div class="max-w-6xl">
+            <span class="inline-block text-xs uppercase tracking-[0.3em] mb-6 opacity-60 reveal">PhD Scholar @ EdUHK • Hong Kong</span>
+            <h1 class="text-6xl md:text-[110px] leading-[0.9] font-light serif reveal stagger-1">
+                Mengfei Peng: <br>
+                <i>Bridging</i> Language <br>
+                & Multimodality.
+            </h1>
+            <div class="mt-12 flex flex-col md:flex-row md:items-end justify-between reveal stagger-2">
+                <p class="max-w-md text-lg md:text-xl text-accent font-light leading-relaxed">
+                    PhD researcher in Teaching Chinese as a Second Language. Investigating the intersection of SLA, task-based teaching, and digital innovation.
+                </p>
+                <div class="mt-8 md:mt-0">
+                    <a href="#experience" class="group flex items-center space-x-4 border border-black/10 rounded-full px-8 py-4 hover:bg-black hover:text-white transition-all duration-500">
+                        <span class="text-sm uppercase tracking-widest">View Experience</span>
+                        <svg class="group-hover:translate-x-1 transition-transform" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Professional Profile -->
+    <section id="about" class="px-6 md:px-12 py-32 border-t border-black/5">
+        <div class="grid md:grid-cols-2 gap-16 items-start">
+            <div class="reveal">
+                <h2 class="text-3xl serif italic mb-8">Academic Narrative</h2>
+                <p class="text-2xl font-light leading-snug">
+                    Educated at the University of Edinburgh and ECNU, my work is driven by a commitment to pedagogical excellence. I aim to cultivate problem-solving abilities in students through project-based and interdisciplinary learning.
+                </p>
+                <div class="mt-12 space-y-4 text-sm uppercase tracking-widest opacity-60">
+                    <p>Research Interests:</p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 border border-black/10 rounded-full">SLA</span>
+                        <span class="px-4 py-2 border border-black/10 rounded-full">Multimodality</span>
+                        <span class="px-4 py-2 border border-black/10 rounded-full">TBLT</span>
+                    </div>
+                </div>
+            </div>
+            <div class="space-y-12 reveal stagger-1">
+                <div class="flex gap-8 border-b border-black/5 pb-8">
+                    <span class="text-xs uppercase tracking-widest opacity-40">EdUHK</span>
+                    <div>
+                        <h4 class="font-semibold mb-2">Teaching Assistant (2024–2026)</h4>
+                        <p class="text-sm text-accent leading-relaxed italic">Assisting courses in SLA research methods, phonetics, and Chinese language textbooks.</p>
+                    </div>
+                </div>
+                <div class="flex gap-8 border-b border-black/5 pb-8">
+                    <span class="text-xs uppercase tracking-widest opacity-40">EdUHK</span>
+                    <div>
+                        <h4 class="font-semibold mb-2">Research Assistant (2023–2024)</h4>
+                        <p class="text-sm text-accent leading-relaxed italic">Data collection in local schools, thematic analysis, and research proposal development.</p>
+                    </div>
+                </div>
+                <div class="flex gap-8">
+                    <span class="text-xs uppercase tracking-widest opacity-40">Global</span>
+                    <div>
+                        <h4 class="font-semibold mb-2">Exchange Experience</h4>
+                        <p class="text-sm text-accent leading-relaxed italic">UBC (Canada), NUS (Singapore), and Haifa University (Israel).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience / Project Grid -->
+    <section id="experience" class="px-6 md:px-12 py-32 bg-white/50">
+        <div class="mb-20 flex justify-between items-end reveal">
+            <h2 class="text-5xl serif">Professional Impact</h2>
+            <p class="hidden md:block text-sm opacity-40">Teaching & Pedagogical Design</p>
+        </div>
+
+        <div class="masonry-grid">
+            <!-- Hainan -->
+            <div class="masonry-item project-card group cursor-pointer reveal stagger-1">
+                <div class="overflow-hidden bg-[#e0e0e0] mb-6 aspect-video">
+                    <img src="https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?auto=format&fit=crop&q=80&w=800" alt="Education" class="w-full h-full object-cover hover-lift">
+                </div>
+                <div>
+                    <h3 class="text-xl serif italic">Core Chinese Teacher</h3>
+                    <p class="text-xs uppercase tracking-widest opacity-50 mt-1">Hainan Future School • 2021–2023</p>
+                    <p class="text-sm text-accent mt-4 font-light">Developed school-based resources under IB frameworks (PYP & MYP) and trained novice teachers.</p>
+                </div>
+            </div>
+
+            <!-- CIEE -->
+            <div class="masonry-item project-card group cursor-pointer reveal stagger-2">
+                <div class="overflow-hidden bg-[#d8d8d8] mb-6 aspect-square">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800" alt="Cultural Exchange" class="w-full h-full object-cover hover-lift">
+                </div>
+                <div>
+                    <h3 class="text-xl serif italic">International Chinese Teacher</h3>
+                    <p class="text-xs uppercase tracking-widest opacity-50 mt-1">CIEE Organization • 2019</p>
+                    <p class="text-sm text-accent mt-4 font-light">Instructed American high school students through Communicative Competence Pedagogy.</p>
+                </div>
+            </div>
+
+            <!-- Publications/Conferences -->
+            <div id="research" class="masonry-item project-card group cursor-pointer reveal stagger-3">
+                <div class="overflow-hidden bg-[#ececec] mb-6 aspect-[4/5] p-12 flex flex-col justify-center border border-black/5">
+                    <h4 class="text-xs uppercase tracking-widest opacity-40 mb-4">Latest Publication</h4>
+                    <p class="text-xl serif italic leading-tight mb-8">"TCSOL Teachers' Stance on the Use of Picture Books in Mandarin Classes"</p>
+                    <div class="mt-auto">
+                        <p class="text-xs uppercase tracking-widest font-semibold">Upcoming Conference</p>
+                        <p class="text-sm mt-2 font-light">ALS 2026: Multimodal assisted TBLT lessons & ADDIE model.</p>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl serif italic">Research & Publications</h3>
+                    <p class="text-xs uppercase tracking-widest opacity-50 mt-1">Global Symposia • 2024–2026</p>
+                </div>
+            </div>
+
+            <!-- Skills -->
+            <div class="masonry-item project-card reveal">
+                <div class="bg-black text-white p-12 aspect-square flex flex-col justify-center">
+                    <h3 class="text-2xl serif mb-6">Expertise</h3>
+                    <ul class="space-y-3 text-xs uppercase tracking-widest">
+                        <li class="flex justify-between"><span>English</span><span>IELTS 7.0</span></li>
+                        <li class="flex justify-between"><span>Chinese</span><span>Native</span></li>
+                        <li class="flex justify-between"><span>SPSS</span><span>Advanced</span></li>
+                        <li class="flex justify-between"><span>IB Framework</span><span>PYP/MYP</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="px-6 md:px-12 py-40 border-t border-black/5">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-5xl md:text-8xl serif mb-12 reveal">Connect.</h2>
+            <div class="space-y-6 reveal stagger-1">
+                <p class="text-xl font-light opacity-60">Open to academic collaboration and educational consulting.</p>
+                <a href="mailto:mpeng@eduhk.hk" class="text-2xl md:text-4xl hover:italic transition-all inline-block border-b-2 border-black/10 pb-2">
+                    mengfei.peng@connect.eduhk.hk
+                </a>
+            </div>
+            
+            <div class="mt-32 flex justify-center space-x-12 text-xs uppercase tracking-[0.2em] opacity-40 reveal stagger-2">
+                <a href="#" class="hover:opacity-100 transition-opacity">Academic CV</a>
+                <a href="#" class="hover:opacity-100 transition-opacity">LinkedIn</a>
+                <a href="#" class="hover:opacity-100 transition-opacity">ResearchGate</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="px-6 md:px-12 py-12 flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-widest opacity-30 border-t border-black/5">
+        <p>© 2026 Mengfei Peng • Education University of Hong Kong</p>
+        <p>Ph.D. Candidate in TCSL</p>
+    </footer>
+
+    <script>
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.classList.add('reveal');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            el.style.opacity = "0";
+            observer.observe(el);
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if(target) target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
